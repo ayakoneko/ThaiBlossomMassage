@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Massage Services & Price List – Thai Blossom</title>
+
+  <!-- Fonts (match main site style) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    /* ===== Base ===== */
+    :root {
+      --peach: #ffe1c4;
+      --peach-light: #fff4e6;
+      --brown: #5b3a23;
+      --brown-dark: #3b241d;
+      --accent: #8c4a22;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--peach);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--brown);
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 20px 80px;
+    }
+
+    /* ===== Heading ===== */
+    .services-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .services-header h1 {
+      font-family: "Playfair Display", serif;
+      font-size: 2.6rem;
+      margin-bottom: 12px;
+      color: var(--brown);
+      font-weight: 600;
+    }
+
+    .services-header p {
+      font-size: 0.98rem;
+      color: #8b6a4b;
+      max-width: 620px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .note-essential {
+      margin-top: 12px;
+      font-size: 0.9rem;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* ===== Service Cards ===== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .service-card {
+      background: linear-gradient(180deg, #fde7d3 0%, #fbe1cc 45%, #f8dcc6 100%);
+      border-radius: 18px;
+      padding: 22px 22px 20px;
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .service-card h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.3rem;
+      margin: 0 0 8px;
+      color: var(--brown);
+    }
+
+    .service-tagline {
+      font-size: 0.92rem;
+      color: #7d6b5a;
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+
+    .service-price-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .service-price-list li {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255, 255, 255, 0.7);
+      padding-top: 4px;
+      margin-top: 4px;
+    }
+
+    .service-price-list span:first-child {
+      opacity: 0.85;
+    }
+
+    .service-price-list span:last-child {
+      font-weight: 600;
+      color: var(--brown);
+    }
+
+    .service-footnote {
+      font-size: 0.8rem;
+      margin-top: 6px;
+      color: #7d6b5a;
+      opacity: 0.9;
+    }
+
+    /* ===== Extras Section ===== */
+    .extras {
+      margin-top: 20px;
+      padding: 20px 22px;
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: 0 14px 26px rgba(0, 0, 0, 0.1);
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+
+    .extras h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.15rem;
+      margin: 0 0 8px;
+      color: var(--brown-dark);
+    }
+
+    .extras p {
+      margin: 4px 0;
+      color: #6e5846;
+    }
+
+    .extras strong {
+      color: var(--accent);
+    }
+
+    /* ===== Bottom note ===== */
+    .opening-hours {
+      margin-top: 28px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #6a594f;
+    }
+
+    .opening-hours strong {
+      color: var(--brown-dark);
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 900px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .page-wrap {
+        padding: 40px 16px 60px;
+      }
+
+      .services-header h1 {
+        font-size: 2.1rem;
+      }
+
+      .service-card {
+        padding: 18px 16px 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-wrap">
+    <header class="services-header">
+      <h1>Massage Services &amp; Price List</h1>
+      <p>
+        Choose from our range of traditional Thai therapies and specialty
+        treatments, carefully designed to ease tension, relieve pain and
+        restore balance in both body and mind.
+      </p>
+      <p class="note-essential">Add Essential Oil to any massage &nbsp; • &nbsp; <strong>+ $5</strong></p>
+    </header>
+
+    <!-- ===== Service Cards ===== -->
+    <section class="services-grid">
+
+      <!-- Thai Traditional -->
+      <article class="service-card">
+        <div>
+          <h2>Thai Traditional Massage</h2>
+          <p class="service-tagline">
+            Classic Thai techniques using stretching and acupressure to release
+            stiffness, improve circulation and restore energy flow.
+          </p>
+        </div>
+        <ul class="service-price-list">
+          <li><span>30 minutes</span><span>$55</span></li>
+          <li><span>45 minutes</span><span>$70</span></li>
+          <li><span>60 minutes</span><span>$90</span></li>
+          <li><span>90 minutes</span><span>$130</span></li>
+          <li><span>120 minutes</span><span>$175</span></li>
+        </ul>
+      </article>
+
+      <!-- Deep Tissue -->
+      <article class="service-card">
+        <div>
+          <h2>Deep Tissue Massage</h2>
+          <p class="service-tagline">
+            Firm, focused pressure targeting deeper muscle layers. Ideal for
+            chronic pain, tight shoulders and lower back tension.
+          </p>
+        </div>
+        <ul class="service-price-list">
+          <li><span>30 minutes</span><span>$60</span></li>
+          <li><span>45 minutes</span><span>$75</span></li>
+          <li><span>60 minutes</span><span>$95</span></li>
+          <li><span>90 minutes</span><span>$150</span></li>
+          <li><span>120 minutes</span><span>$185</span></li>
+        </ul>
+      </article>
+
+      <!-- Relaxation -->
+      <article class="service-card">
+        <div>
+          <h2>Relaxation Massage</h2>
+          <p class="service-tagline">
+            Gentle, flowing full-body massage to calm the nervous system, soothe
+            stress and leave you feeling deeply relaxed.
+          </p>
+        </div>
+        <ul class="service-price-list">
+          <li><span>30 minutes</span><span>$55</span></li>
+          <li><span>45 minutes</span><span>$70</span></li>
+          <li><span>60 minutes</span><span>$90</span></li>
+          <li><span>90 minutes</span><span>$130</span></li>
+          <li><span>120 minutes</span><span>$175</span></li>
+        </ul>
+      </article>
+
+      <!-- Back, Head & Shoulders -->
+      <article class="service-card">
+        <div>
+          <h2>Back, Head &amp; Shoulders</h2>
+          <p class="service-tagline">
+            Targeted treatment for upper body fatigue, perfect for desk workers
+            and anyone suffering from neck and shoulder tension.
+          </p>
+        </div>
+        <ul class="service-price-list">
+          <li><span>30 minutes</span><span>$55</span></li>
+          <li><span>45 minutes</span><span>$70</span></li>
+          <li><span>60 minutes</span><span>$90</span></li>
+          <li><span>90 minutes</span><span>$130</span></li>
+          <li><span>120 minutes</span><span>$175</span></li>
+        </ul>
+      </article>
+
+      <!-- Feet + Legs -->
+      <article class="service-card">
+        <div>
+          <h2>Feet &amp; Legs Massage</h2>
+          <p class="service-tagline">
+            Reviving lower-leg and foot massage that eases heaviness, improves
+            circulation and leaves tired feet refreshed.
+          </p>
+        </div>
+        <ul class="service-price-list">
+          <li><span>30 minutes</span><span>$60</span></li>
+          <li><span>45 minutes</span><span>$75</span></li>
+          <li><span>60 minutes</span><span>$95</span></li>
+          <li><span>90 minutes</span><span>$130</span></li>
+          <li><span>120 minutes</span><span>$180</span></li>
+        </ul>
+      </article>
+
+      <!-- Hot Stone -->
+      <article class="service-card">
+        <div>
+          <h2>Hot Stone Massage</h2>
+          <p class="service-tagline">
+            Warm basalt stones combined with gentle massage to melt deep
+            tension, improve circulation and induce profound relaxation.
+          </p>
+        </div>
+        <ul class="service-price-list">
+          <li><span>60 minutes</span><span>$120</span></li>
+          <li><span>90 minutes</span><span>$160</span></li>
+          <li><span>120 minutes</span><span>$200</span></li>
+        </ul>
+        <p class="service-footnote">Available for longer sessions only.</p>
+      </article>
+
+      <!-- Back Scrub with Wrap -->
+      <article class="service-card">
+        <div>
+          <h2>Back Scrub with Wrap</h2>
+          <p class="service-tagline">
+            Exfoliating back treatment with nourishing wrap to smooth the skin,
+            ease tension and leave your back refreshed and renewed.
+          </p>
+        </div>
+        <ul class="service-price-list">
+          <li><span>30 minutes</span><span>$65</span></li>
+          <li><span>90 minutes</span><span>$150</span></li>
+        </ul>
+      </article>
+
+      <!-- Facial -->
+      <article class="service-card">
+        <div>
+          <h2>Vagheggi Facial Massage</h2>
+          <p class="service-tagline">
+            Luxurious phytocosmetic facial using Vagheggi products to hydrate,
+            brighten and rejuvenate tired skin while you deeply relax.
+          </p>
+        </div>
+        <ul class="service-price-list">
+          <li><span>45 minutes</span><span>$120</span></li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- ===== Extras / Notes ===== -->
+    <section class="extras">
+      <h3>Enhancements &amp; Complimentary Touches</h3>
+      <p><strong>Essential Oils +$5</strong> &mdash; Add aromatic essential oils to any massage for deeper relaxation and a spa-like experience.</p>
+      <p><strong>Free Hot Oil or Hot Stone + Thai Herbal Balm</strong> included with selected treatments, for enhanced warmth and soothing muscle relief.</p>
+    </section>
+
+    <p class="opening-hours">
+      <strong>Open:</strong> Mon – Fri &nbsp; | &nbsp; <strong>Sat &amp; Sun by appointment only</strong><br />
+      <strong>Location:</strong> 5/5-7/23 Gold Coast Hwy, Broadbeach
+    </p>
+  </div>
+</body>
+</html>
