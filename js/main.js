@@ -1,7 +1,6 @@
 const hamburger = document.querySelector('.hamburger');
 const navi = document.querySelector('#navi');
 
-
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     navi.classList.toggle('active');
